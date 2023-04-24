@@ -2,150 +2,358 @@
     font-family: "San Francisco";
     font-weight: 400;
     src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
-  }
+}
+
+
+/* Nav-Bar*/
   
-  /* Nav-Bar*/
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
   
-  *{
-      box-sizing: border-box;
-      margin: 0px;
-      padding: 0px;
-  }
+li, button {
+    font-family: 'San Francisco', sans-serif;
+    font-weight: bolder;
+    font-size: 1em;
+    color: black;
+    text-decoration: None;
+}
   
-  li, button {
-      font-family: 'San Francisco', sans-serif;
-      font-weight: bolder;
-      font-size: 1em;
-      color: black;
-      text-decoration: None;
-  }
+header {
+    display: flex;
+    /* children of flex container can flex to fill parent container (header)*/
+    justify-content: space-between; 
+    /* pushes the left and right items to the far edge and the item in the middle spaces evenly */
+    align-items: center;
+    background-color: black;
+    padding: 0.5% 10% 0.5%;
+}
   
-  header {
-      display: flex;
-      /* children of flex container can flex to fill parent container (header)*/
-      justify-content: space-between; 
-      /* pushes the left and right items to the far edge and the item in the middle spaces evenly */
-      align-items: center;
-      background-color: black;
-      padding: 0.5% 10% 0.5%;
-  }
+a {
+    font-family: 'San Francisco', sans-serif;
+    font-weight: bolder;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: None;
+    background-color: black;
+    transition: all 0.3s ease 0s;
+}
   
-  a {
-      font-family: 'San Francisco', sans-serif;
-      font-weight: bolder;
-      font-size: 1.1em;
-      color: white;
-      text-decoration: None;
-      background-color: black;
-      transition: all 0.3s ease 0s;
-  }
+body {
+    background-image: url('https://i.pinimg.com/originals/df/c3/09/dfc309dd3b5d8971c5425ea1f8a28f3d.jpg');
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    z-index: 1;
+}
+
+.Bitcoin-nav-Logo {
+    height: 85px
+}
   
-  body {
-      background-image: url('https://images.unsplash.com/photo-1597773150796-e5c14ebecbf5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80');
-      background-size: cover;
-      z-index: 1;
-  }
+.Bitcoin-nav-Logo {
+    cursor: pointer;
+}
   
+.nav-links {
+    list-style: None;
   
+}
   
-  .Bitcoin-nav-Logo {
-      height: 85px
-  }
+.nav-links, li {
+    display: inline-block;
+    padding: 1em 1em;
+    background-color: black;
+    transition: all 0.3s ease 0s;
+}
   
-  .Bitcoin-nav-Logo {
-      cursor: pointer;
-  }
-  
-  .nav-links {
-      list-style: None;
-  
-  }
-  
-  .nav-links, li {
-      display: inline-block;
-      padding: 1em 1em;
-      background-color: black;
-      transition: all 0.3s ease 0s;
-  }
-  
-  .donation {
-      width: 12%;
-  }
+.donation {
+    width: 12%;
+}
   
   /* Underline-Effect */
   
-  .underline-effect {
-      display: inline-block;
-      padding-bottom: 0.25rem;
-      position: relative;
-  }
+.underline-effect {
+    display: inline-block;
+    padding-bottom: 0.25rem;
+    position: relative;
+}
   
-  .underline-effect::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      width: 0;
-      height: 0.15em;
-      background-color: rgba(0,184,204,1);
-      transition: width 0.25s ease-out;
-  }
+.underline-effect::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0.15em;
+    background-color: rgba(0,184,204,1);
+    transition: width 0.25s ease-out;
+}
   
-  .underline-effect:hover::before {
-      width: 100%;
-  }
+.underline-effect:hover::before {
+    width: 100%;
+}
   
-  /* HERO */
+/* HERO */
   
-  .heading-box {
-      align-content: center;
-      display: grid;
-      place-items: center;
-      font-family: 'San Francisco';
-      font-size: 4em;
-      font-weight: 600;
-      height: 100vh;
-  }
+.heading-box {
+    align-content: center;
+    display: grid;
+    place-items: center;
+    font-family: 'San Francisco';
+    font-size: 4em;
+    font-weight: 600;
+    height: 100vh;
+}
   
-  .hero-text {
-      color: white;
-      text-align: center;
-  }
+.hero-text {
+    color: white;
+    text-align: center;
+}
   
-  .hero-btn {
-      padding: 20px 50px;
-      font-size: 3rem;
-      position: relative;
-      margin: 32px;
-      background: rgba(0,0,0,1);
-      color: white;
-      border-radius: 30px;
-      transition: transform 0.3s ease;
-  }
+.hero-btn {
+    padding: 20px 50px;
+    font-size: 2rem;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 200;
+    position: relative;
+    margin: 32px;
+    background: rgba(0,0,0,1);
+    color: white;
+    border-radius: 100px;
+    transition: transform 0.3s ease;
+}
   
-  .hero-btn::after, .hero-btn::before {
-      content: '';
-      position: absolute;
-      opacity: 0.4;
-      background: black;
-      border-radius: inherit;
-      width: 100%;
-      height: 100%;
-      left: 0;
-      bottom: 0;
-      z-index: -1;
-      transition: transform 0.3s ease;
-  }
+.hero-btn::after, .hero-btn::before {
+    content: '';
+    position: absolute;
+    opacity: 0.4;
+    background: black;
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: transform 0.3s ease;
+}
   
-  .hero-btn:hover {
-      transition: translate(-12px, -12px);
-  }
+.hero-btn:hover {
+    transition: translate(-12px, -12px);
+}
   
-  .hero-btn:hover::after {
-      transform: translate(6px, 6px);
-  }
+.hero-btn:hover::after {
+    transform: translate(6px, 6px);
+}
   
-  .hero-btn:hover::before {
-      transform: translate(12px, 12px);
-  }
+.hero-btn:hover::before {
+    transform: translate(12px, 12px);
+}
+
+.introduction {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.advert {
+    display: grid;
+    grid-template-rows: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
+    grid-template-columns: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
+    height: 120vh;
+    width: 100vh;
+    
+}
+
+.index-logo-large {
+    height: 30px;
+    width: auto;
+}
+
+.index-logo {
+    height: 20px;
+    width: auto;
+}
+
+.advert-title {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 10;
+    font-size: 1.6em;
+    color: white;
+    font-family: 'Archivo';
+}
+
+.speed-text-container {
+    margin: 20px 0 20px;
+    grid-row-start: 4;
+    grid-row-end: 7;
+    grid-column-start: 2;
+    grid-column-end: 10;
+    background-color: rgb(22, 22, 22);
+    border-radius: 30px;
+    font-size: 1.3em;
+    color: white;
+    font-family: 'Archivo';
+}
+
+#speed-header {
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-left: 4px solid rgb(5, 243, 255);
+    padding-left: 10px;
+}
+
+.advert, p {
+    margin: 20px 30px 20px;
+    font-size: 1em;
+    font-family: 'San Francisco';
+}
+
+.cost-text-container {
+    margin: 30px 0 30px;
+    grid-row-start: 7;
+    grid-row-end: 11;
+    grid-column-start: 2;
+    grid-column-end: 10;
+    background-color: rgb(22, 22, 22);
+    border-radius: 30px;
+    font-size: 1.3em;
+    color: white;
+    font-family: 'Archivo';
+}
+
+#cost-header {
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-left: 4px solid rgb(5, 243, 255);
+    padding-left: 10px;
+}
+
+.fear-text-container {
+    margin: 20px 0 20px;
+    grid-row-start: 11;
+    grid-row-end: 15;
+    grid-column-start: 2;
+    grid-column-end: 10;
+    background-color: rgb(22, 22, 22);
+    border-radius: 30px;
+    font-size: 1.3em;
+    color: white;
+    font-family: 'Archivo';
+}
+
+#fear-header {
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-left: 4px solid rgb(5, 243, 255);
+    padding-left: 10px;
+}
+  
+
+.transaction-speed {
+    grid-row-start: 3;
+    grid-row-end: 6;
+    grid-column-start: 13;
+    grid-column-end: 20;
+    width: 360px;
+    height: 232px;
+    display: grid;
+    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+}
+
+.transaction-cost {
+    grid-row-start: 7;
+    grid-row-end: 10;
+    grid-column-start: 13;
+    grid-column-end: 20;
+    width: 360px;
+    height: 232px;
+    display: grid;
+    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+}
+
+.total-users {
+    grid-row-start: 11;
+    grid-row-end: 14;
+    grid-column-start: 13;
+    grid-column-end: 20;
+    width: 360px;
+    height: 232px;
+    display: grid;
+    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+}
+
+#num-heading {
+    grid-row-start: 1;
+    grid-row-end: 8;
+    grid-column-start: 1;
+    grid-column-end: 11;   
+    font-family: 'San Francisco', sans-serif;   
+    font-weight: 100;
+    font-size: 9em;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+  
+#subheadng-text {
+    grid-row-start: 8;
+    grid-row-end: 11;
+    grid-column-start: 1;
+    grid-column-end: 11;   
+    font-family: 'San Francisco', sans-serif;   
+    font-size: 1em;
+    color: white;
+    text-align: center;
+}
+
+.transact-speed-num {
+    background: -webkit-linear-gradient(#ffffff, #00f2ff)
+}
+
+.transact-cost-num {
+    background: -webkit-linear-gradient(#00f2ff, #0088ff)
+}
+
+.total-users-num {
+    background: -webkit-linear-gradient(#0088ff,#0a007a);
+
+}
+
+.company-logos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 110px;
+    grid-row-start: 19;
+    grid-row-end: 21;
+    grid-column-start: 1;
+    grid-column-end: 21;
+}
+  
+.companies-header {
+    grid-row-start: 18;
+    grid-row-end: 19;
+    grid-column-start: 1;
+    grid-column-end: 21;
+    font-family: 'San Francisco';
+    font-size: 1.2em;
+    margin-top: 50px;
+    color: white;
+    text-align: center;
+}
+
