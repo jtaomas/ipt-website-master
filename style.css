@@ -4,6 +4,7 @@
     src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 /* Nav-Bar*/
   
@@ -63,7 +64,7 @@ body {
   
 }
   
-.nav-links, li {
+.nav-links li {
     display: inline-block;
     padding: 1em 1em;
     background-color: black;
@@ -105,14 +106,14 @@ body {
     display: grid;
     place-items: center;
     font-family: 'San Francisco';
-    font-size: 4em;
-    font-weight: 600;
+    font-size: 3em;
     height: 100vh;
 }
   
 .hero-text {
     color: white;
     text-align: center;
+    font-family: 'Poppins', sans-serif;
 }
   
 .hero-btn {
@@ -155,7 +156,7 @@ body {
 }
 
 .introduction {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -163,15 +164,25 @@ body {
 
 .advert {
     display: grid;
-    grid-template-rows: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
-    grid-template-columns: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
-    height: 1561px;
+    grid-template-rows: repeat(29,3.4482758620689655172413793103448%);
+    grid-template-columns: repeat(20,5%);
+    height: 2263px;
     width: 1023px;
     
 }
 
-.index-logo-large {
+.index-logo-extraextralarge {
+    height: 40px;
+    width: auto;
+}
+
+.index-logo-extralarge {
     height: 30px;
+    width: auto;
+}
+
+.index-logo-large {
+    height: 25px;
     width: auto;
 }
 
@@ -196,7 +207,8 @@ body {
     grid-row-end: 7;
     grid-column-start: 2;
     grid-column-end: 10;
-    background-color: rgb(22, 22, 22);
+    background-color: black;
+    box-shadow: 5px 5px 2px 1px rgb(5, 243, 255);
     border-radius: 30px;
     font-size: 1.3em;
     color: white;
@@ -207,23 +219,24 @@ body {
     margin-top: 30px;
     margin-left: 30px;
     margin-right: 30px;
-    border-left: 4px solid rgb(5, 243, 255);
+    border-left: 2px solid rgb(5, 243, 255);
     padding-left: 10px;
 }
 
-.advert, p {
+.advert p {
     margin: 20px 30px 20px;
     font-size: 1em;
     font-family: 'San Francisco';
 }
 
 .cost-text-container {
-    margin: 30px 0 30px;
+    margin: 40px 0 30px;
     grid-row-start: 7;
     grid-row-end: 11;
     grid-column-start: 2;
     grid-column-end: 10;
-    background-color: rgb(22, 22, 22);
+    background-color: black;
+    box-shadow: 5px 5px 2px 1px rgb(5, 243, 255);
     border-radius: 30px;
     font-size: 1.3em;
     color: white;
@@ -234,17 +247,18 @@ body {
     margin-top: 30px;
     margin-left: 30px;
     margin-right: 30px;
-    border-left: 4px solid rgb(5, 243, 255);
+    border-left: 2px solid rgb(5, 243, 255);
     padding-left: 10px;
 }
 
 .fear-text-container {
-    margin: 20px 0 20px;
+    margin: 30px 0 20px;
     grid-row-start: 11;
     grid-row-end: 15;
     grid-column-start: 2;
     grid-column-end: 10;
-    background-color: rgb(22, 22, 22);
+    background-color: black;
+    box-shadow: 5px 5px 2px 1px rgb(5, 243, 255);
     border-radius: 30px;
     font-size: 1.3em;
     color: white;
@@ -255,7 +269,7 @@ body {
     margin-top: 30px;
     margin-left: 30px;
     margin-right: 30px;
-    border-left: 4px solid rgb(5, 243, 255);
+    border-left: 2px solid rgb(5, 243, 255);
     padding-left: 10px;
 }
   
@@ -332,25 +346,413 @@ body {
 
 }
 
-.company-logos {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    grid-row-start: 19;
-    grid-row-end: 21;
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/*Companies Payment Advert*/
+
+.companies-header {
+    grid-row-start: 17;
+    grid-row-end: 18;
     grid-column-start: 1;
     grid-column-end: 21;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.9em;
+    color: rgb(255, 255, 255);
+    margin-left: 50px;
+    padding-left: 3px aqua;
+    text-align: left;
 }
-  
-.companies-header {
+
+.companies-subheader {
     grid-row-start: 18;
     grid-row-end: 19;
     grid-column-start: 1;
-    grid-column-end: 21;
-    font-family: 'San Francisco';
-    font-size: 1.2em;
-    margin-top: 50px;
+    grid-column-end: 12;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(255, 255, 255);
+    margin-left: 50px;
+    text-align: left;
+}
+
+.companies-advert {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    border-left: solid rgb(41, 41, 41) 3px;
+    grid-row-start: 19;
+    grid-row-end: 26;
+    grid-column-start: 2;
+    grid-column-end: 14;
+    padding-left: 30px;
+}
+
+.sub-ad {
+    margin-top: 20px;
+    width: 90%;
+    height: 33%;
+}
+
+.sub-ad-1 {
+    width: 90%;
+    height: 29%;
+}
+
+.sub-ad-2 {
+    width: 90%;
+    height: 33%;
+}
+
+.sub-title {
+    font-family: 'Poppins', sans-serif !important;
+    margin: 0 !important;
     color: white;
+    border-left: 2px solid rgb(5, 243, 255);
+    padding-left: 10px;
+    font-size: 1.5em !important; 
+}
+
+.body-text-advert {
+    margin: 0 !important;
+    color: white;
+    padding-top: 10px;
+    font-size: 1em !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.logo-header {
+    font-family: 'Poppins', sans-serif !important;
+    margin: 0 !important;
+    color: white;
+    font-size: 1em !important; 
+    grid-row-start: 27;
+    grid-row-end: 28;
+    grid-column-start: 2;
+    grid-column-end: 14;
+    z-index: 1;
+    padding-bottom: 50px;
+}
+
+.logos {
+    grid-row-start: 28;
+    grid-row-end: 29;
+    grid-column-start: 1;
+    grid-column-end: 21;
+    overflow: hidden;
+    display: inline-flex;
+    white-space: nowrap;
+}
+
+.logos-slide {
+    align-items: flex-start;
+    display: flex;
+    width: fit-content;
+    animation: 15s slide infinite linear;
+}
+
+.logos-slide .logo-box {
+    height: 100px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+span {
+    background-color: #00fbff80;
+    color: rgb(255, 255, 255);
+}
+
+.bitcoin {
+    height: 350px;
+    margin: 30px auto 0 auto;
+    position: relative;
+    width: 350px;
+}
+
+
+.circle {
+    border: 25px solid var(--black);
+    border-radius: 50%;
+    height: 300px;
+    margin: 0 auto;
+    position: absolute;
+    transform: rotate(0);
+    transition: var(--transition);
+    width: 300px;
+    will-change: transform;
+}
+
+.wrapper {
+    height: 194px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 145px;
+}
+
+.primary-element {
+    background-color: var(--black);
+    border: 1px solid var(--black);
+    position: absolute;
+    transition: var(--transition);
+    will-change: background;
+    z-index: 1;
+}
+
+.white-element {
+    background-color: var(--white);
+    position: absolute;
+    z-index: 2;
+}
+
+.element-1,
+.element-2 {
+    height: 18px;
+    left: 0;
+    width: 76px;
+}
+
+.element-1 {
+    top: 25px;
+}
+
+.element-2 {
+    top: 152px;
+}
+
+.element-3 {
+    height: 145px;
+    left: 22px;
+    top: 25px;
+    transform-origin: 0 0;
+    width: 36px;
+}
+
+.element-4,
+.element-5 {
+    height: 194px;
+    top: 0;
+    width: 20px;
+    z-index: 1;
+}
+
+.element-4 {
+    left: 38px;
+}
+
+.element-5 {
+    left: 76px;
+}
+
+.element-6 {
+    height: 18px;
+    left: 22px;
+    top: 86px;
+    width: 54px;
+}
+
+.element-7,
+.element-8 {
+    border-bottom-right-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+.element-7,
+.element-8 {
+    left: 96px;
+}
+
+.element-7 {
+    height: 68px;
+    top: 25px;
+    width: 43px;
+}
+
+.element-8 {
+    height: 77px;
+    top: 93px;
+    width: 49px;
+}
+
+.element-9,
+.element-10 {
+    border-bottom-right-radius: 40px;
+    border-top-right-radius: 40px;
+    left: 58px;
+    z-index: 10;
+}
+
+.element-9 {
+    height: 43px;
+    top: 43px;
+    width: 43px;
+    z-index: 10;
+}
+
+.element-10 {
+    height: 48px;
+    top: 104px;
+    width: 50px;
+}
+
+.element-11 {
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 7px;
+    height: 107px;
+    left: 0;
+    top: 45px;
+    width: 22px;
+    z-index: 10;
+}
+
+.element-12,
+.element-13 {
+    background-color: var(--black);
+    height: 8px;
+    left: 14px;
+    width: 8px;
+    z-index: 9;
+}
+
+.element-12 {
+    top: 43px;
+}
+
+.element-13 {
+    top: 144px;
+}
+
+.bitcoin:hover .primary-element,
+.bitcoin.hover .primary-element {
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.bitcoin:hover .circle,
+.bitcoin.hover .circle {
+    border-color: var(--primary);
+    transform: rotate(-15deg);
+}
+
+.show * {
+    background-color: var(--black);
+    border: 1px solid var(--primary);
+    opacity: 0.7;
+}
+
+.author {
+    margin-top: 3rem;
     text-align: center;
 }
+
+
+/*Footer*/
+
+footer *{
+    line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+    padding: 0;
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1170px;
+	margin: auto;
+}
+.row{
+	display: flex;
+    justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #000000;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #00fff7;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li p{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li p:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links p{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+@media(max-width: 767px){
+    .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+  }
+  }
+  @media(max-width: 574px){
+    .footer-col{
+      width: 100%;
+  }
+  }
+  
+
+
+
+
+
+
+
+
