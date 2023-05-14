@@ -1,0 +1,394 @@
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 400;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Nav-Bar*/
+  
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+  
+li, button {
+    font-family: 'San Francisco', sans-serif;
+    font-weight: bolder;
+    font-size: 1em;
+    color: black;
+    text-decoration: None;
+}
+  
+header {
+    display: flex;
+    /* children of flex container can flex to fill parent container (header)*/
+    justify-content: space-between; 
+    /* pushes the left and right items to the far edge and the item in the middle spaces evenly */
+    align-items: center;
+    background-color: black;
+    padding: 0.5% 10% 0.5%;
+}
+  
+a {
+    font-family: 'San Francisco', sans-serif;
+    font-weight: bolder;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: None;
+    background-color: black;
+    transition: all 0.3s ease 0s;
+}
+
+.Bitcoin-nav-Logo {
+    height: 85px
+}
+  
+.Bitcoin-nav-Logo {
+    cursor: pointer;
+}
+  
+.nav-links {
+    list-style: None;
+  
+}
+  
+.nav-links li {
+    display: inline-block;
+    padding: 1em 1em;
+    background-color: black;
+    transition: all 0.3s ease 0s;
+}
+  
+.donation {
+    width: 12%;
+}
+  
+  /* Underline-Effect */
+  
+.underline-effect {
+    display: inline-block;
+    padding-bottom: 0.25rem;
+    position: relative;
+}
+  
+.underline-effect::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0.15em;
+    background-color: rgba(0,184,204,1);
+    transition: width 0.25s ease-out;
+}
+  
+.underline-effect:hover::before {
+    width: 100%;
+}
+
+/*Main*/
+main {
+    display: grid;
+    grid-template-rows: repeat(12,0.08333333333);
+    grid-template-columns: repeat(20,5%);
+    height: 936.4137px;
+    width: 1023px;
+    background-color: #000000;
+}
+
+html {background: #000000;}
+
+.blockchain {
+    grid-row-start: 6;
+    grid-row-end: 18;
+    grid-column-start: 6;
+    grid-column-end: 18;
+    max-width: 700px;
+    margin: auto;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#redblocks > * {
+    transform: translate3d(160px, -93px, 0);
+    animation: moveblocks 4s 1s ease infinite;
+}
+
+@keyframes moveblocks {
+    0% {
+        transform: translate3d(160px, -93px, 0);
+    }
+    50%,
+    100% {
+        transform: translate(0);
+    }
+}
+
+#firstBlock {
+    transform: translate3d(160px, -93px, 0);
+    animation: firstBlock 4s 1s ease infinite;
+}
+#blockdis {
+    animation: blockdis 4s 1s ease infinite;
+}
+@keyframes blockdis {
+    30% {
+        opacity: 1;
+    }
+    40%, 100% {
+        opacity: 0;
+        transform: translate3d(-160px, 93px, 0);
+    }
+}
+@keyframes firstBlock {
+    0%,
+    15% {
+        opacity: 0;
+    }
+    40%,
+    100% {
+        opacity: 1;
+    }
+}
+
+@for $i from 1 to 5 {
+    #redblocksparticles g:nth-child(#{$i}) polygon {
+        opacity: 0.35;
+        animation: glow 4s 1s ease infinite;
+    }
+}
+@for $i from 1 to 20 {
+    #redblocksparticles g:nth-child(1) g circle:nth-child(#{$i}){
+        animation: dots 4s #{1000+$i*50}ms ease infinite;
+    }
+    #redblocksparticles g:nth-child(2) g circle:nth-child(#{$i}){
+        animation: dots 4s #{1000+$i*50}ms ease infinite;
+    }
+    #redblocksparticles g:nth-child(3) g circle:nth-child(#{$i}){
+        animation: dots 4s #{1000+$i*50}ms ease infinite;
+    }
+    #redblocksparticles g:nth-child(4) g circle:nth-child(#{$i}){
+        animation: dots 4s #{1000+$i*50}ms ease infinite;
+    }
+}
+@keyframes glow {
+    0%,
+    45% {
+        opacity: 0;
+    }
+    60%, 100% {
+        opacity: 0.35;
+    }
+}
+
+@keyframes dots {
+    0%,
+    35% {
+        transform: translate(0);
+        opacity: 0;
+    }
+    60%, 80% {
+        transform: translate(55px, -35px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(55px, -35px);
+        opacity: 0;
+    }
+}
+
+@for $i from 1 to 22 {
+    #purplebg > :nth-child(#{$i}) {
+        animation: up 2s #{$i* 500}ms ease infinite alternate;
+    }
+}
+
+@keyframes up {
+    to {
+        transform: translate(0, -25px);
+    }
+}
+
+@for $i from 1 to 13 {
+    #bottomparticles > :nth-child(#{$i}){
+        animation: particles 4s #{$i*300}ms ease infinite alternate, p 2s ease infinite alternate;
+    }
+    #bottomparticles2 > :nth-child(#{$i}){
+        animation: particles 4s #{$i*300}ms ease infinite alternate, p 2s ease infinite alternate;
+    }
+    #redglowparticles > :nth-child(#{$i}){
+        animation: particles 4s #{$i*300}ms ease infinite alternate, p 2s ease infinite alternate;
+    }
+
+}
+@keyframes p {
+    85%,
+     100% {
+        opacity: 0;
+    }
+}
+
+@keyframes particles {
+    0%, 100% {
+        transform: translate(0);
+    }
+    50% {
+        transform: translate(10px, 15px);
+    }
+}
+
+.particlespoly {
+    animation: p 2s ease infinite alternate;
+}
+
+@for $i from 1 to 4 {
+    #d-app g:nth-child(#{$i}){
+        animation: updown 2s #{$i*200}ms ease-in-out infinite alternate;
+    }
+}
+@for $i from 1 to 4 {
+    #d-apps2 g:nth-child(#{$i}){
+        animation: updown 2s #{$i*200}ms ease-in-out infinite alternate;
+    }
+}
+@for $i from 1 to 20 {
+    #d-apps2wrapper g:nth-child(3) g > circle:nth-child(#{$i}){
+        animation: updown 2s #{$i*50}ms ease infinite alternate;
+    }
+}
+@for $i from 1 to 20 {
+    #d-appswrapper g:nth-child(2) g > circle:nth-child(#{$i}){
+        animation: updown 2s #{$i*50}ms ease infinite alternate;
+    }
+}
+
+
+@keyframes updown {
+    100% {
+        transform: translate(0, -20px);
+    }
+}
+
+#Layer_1 > g:nth-child(2) > g:nth-child(18) > g:nth-child(12) {
+    animation: arrows 1s ease-in-out infinite alternate, p 2s ease infinite alternate;
+}
+@keyframes arrows {
+    to {
+        transform: translate(25px, 25px);
+    }
+}
+
+#Layer_1 > g:nth-child(2) > g:nth-child(17) > g:nth-child(13) {
+    animation: arrows2 1s ease-in-out infinite alternate, p 2s ease infinite alternate;
+}
+@keyframes arrows2 {
+    to {
+        transform: translate(-25px, -25px);
+    }
+}
+
+#Layer_1 > g:nth-child(2) > g:nth-child(17) > g:nth-child(12) {
+    animation: arrows 1s ease-in-out infinite alternate, p 2s ease infinite alternate;
+}
+
+
+
+/*Footer*/
+
+footer *{
+    line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+    padding: 0;
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1170px;
+	margin: auto;
+}
+.row{
+	display: flex;
+    justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #000000;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #00fff7;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+@media(max-width: 767px){
+    .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+  }
+  }
+  @media(max-width: 574px){
+    .footer-col{
+      width: 100%;
+  }
+  }
+  

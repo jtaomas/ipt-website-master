@@ -1,0 +1,187 @@
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 400;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Nav-Bar*/
+  
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+  
+li, button {
+    font-family: 'San Francisco', sans-serif;
+    font-weight: bolder;
+    font-size: 1em;
+    color: black;
+    text-decoration: None;
+}
+  
+header {
+    display: flex;
+    /* children of flex container can flex to fill parent container (header)*/
+    justify-content: space-between; 
+    /* pushes the left and right items to the far edge and the item in the middle spaces evenly */
+    align-items: center;
+    background-color: black;
+    padding: 0.5% 10% 0.5%;
+}
+  
+a {
+    font-family: 'San Francisco', sans-serif;
+    font-weight: bolder;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: None;
+    background-color: black;
+    transition: all 0.3s ease 0s;
+}
+
+.Bitcoin-nav-Logo {
+    height: 85px
+}
+  
+.Bitcoin-nav-Logo {
+    cursor: pointer;
+}
+  
+.nav-links {
+    list-style: None;
+  
+}
+  
+.nav-links li {
+    display: inline-block;
+    padding: 1em 1em;
+    background-color: black;
+    transition: all 0.3s ease 0s;
+}
+  
+.donation {
+    width: 12%;
+}
+  
+  /* Underline-Effect */
+  
+.underline-effect {
+    display: inline-block;
+    padding-bottom: 0.25rem;
+    position: relative;
+}
+  
+.underline-effect::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0.15em;
+    background-color: rgba(0,184,204,1);
+    transition: width 0.25s ease-out;
+}
+  
+.underline-effect:hover::before {
+    width: 100%;
+}
+
+
+/*Footer*/
+
+footer *{
+    line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+    padding: 0;
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1170px;
+	margin: auto;
+}
+.row{
+	display: flex;
+    justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #000000;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #00fff7;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+@media(max-width: 767px){
+    .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+  }
+  }
+  @media(max-width: 574px){
+    .footer-col{
+      width: 100%;
+  }
+  }
+  

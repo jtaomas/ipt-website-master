@@ -208,7 +208,7 @@ body {
     grid-column-start: 2;
     grid-column-end: 10;
     background-color: black;
-    box-shadow: 5px 5px 2px 1px rgb(5, 243, 255);
+    box-shadow: 2px 2px 1px 1px rgb(5, 243, 255);
     border-radius: 30px;
     font-size: 1.3em;
     color: white;
@@ -221,6 +221,7 @@ body {
     margin-right: 30px;
     border-left: 2px solid rgb(5, 243, 255);
     padding-left: 10px;
+    font-weight: 100;
 }
 
 .advert p {
@@ -236,7 +237,7 @@ body {
     grid-column-start: 2;
     grid-column-end: 10;
     background-color: black;
-    box-shadow: 5px 5px 2px 1px rgb(5, 243, 255);
+    box-shadow: 2px 2px 1px 1px rgb(5, 243, 255);
     border-radius: 30px;
     font-size: 1.3em;
     color: white;
@@ -249,6 +250,7 @@ body {
     margin-right: 30px;
     border-left: 2px solid rgb(5, 243, 255);
     padding-left: 10px;
+    font-weight: 100;
 }
 
 .fear-text-container {
@@ -258,7 +260,7 @@ body {
     grid-column-start: 2;
     grid-column-end: 10;
     background-color: black;
-    box-shadow: 5px 5px 2px 1px rgb(5, 243, 255);
+    box-shadow: 2px 2px 1px 1px rgb(5, 243, 255);
     border-radius: 30px;
     font-size: 1.3em;
     color: white;
@@ -271,6 +273,7 @@ body {
     margin-right: 30px;
     border-left: 2px solid rgb(5, 243, 255);
     padding-left: 10px;
+    font-weight: 100;
 }
   
 
@@ -357,6 +360,14 @@ body {
 
 /*Companies Payment Advert*/
 
+#particles-js {
+    grid-row-start: 20;
+    grid-row-end: 25;
+    grid-column-start: 14;
+    grid-column-end: 20;
+    background-color: #000000;
+}
+
 .companies-header {
     grid-row-start: 17;
     grid-row-end: 18;
@@ -436,7 +447,7 @@ body {
     grid-column-start: 2;
     grid-column-end: 14;
     z-index: 1;
-    padding-bottom: 50px;
+    padding-top: 25px;
 }
 
 .logos {
@@ -547,7 +558,8 @@ ul{
 	color: #ffffff;
 	transition: all 0.5s ease;
 }
-.footer-col .social-links a:hover{
+
+.footer-col .social-links p:hover{
 	color: #24262b;
 	background-color: #ffffff;
 }
@@ -564,9 +576,6 @@ ul{
   }
   }
   
-
-
-
 
 
 
