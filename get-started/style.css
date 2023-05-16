@@ -168,6 +168,13 @@ html {background: #000000;}
     grid-column-end: 11;
 }
 
+#three {
+    grid-row-start: 19;
+    grid-row-end: 23;
+    grid-column-start: 11;
+    grid-column-end: 20;
+}
+
 .image {
     grid-row-start: 4;
     grid-row-end: 8;
@@ -190,6 +197,75 @@ html {background: #000000;}
     grid-row-end: 18;
     grid-column-start: 12;
     grid-column-end: 20;
+}
+
+#img-spend {
+    grid-row-start: 19;
+    grid-row-end: 23;
+    grid-column-start: 3;
+    grid-column-end: 10;
+}
+
+#img-final {
+    height: 234px;
+    width: 100%;
+    grid-row-start: 24;
+    grid-row-end: 27;
+    grid-column-start: 3;
+    grid-column-end: 20;
+}
+
+#foot {
+    grid-row-start: 27;
+    grid-row-end: 29;
+    grid-column-start: 3;
+    grid-column-end: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Poppins',sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+}
+
+#subfooter {
+    grid-row-start: 29;
+    grid-row-end: 30;
+    grid-column-start: 3;
+    grid-column-end: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Poppins',sans-serif;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: center;
+    padding-bottom: 50px;
+} 
+
+#faqs-button {
+    color: #e8e8e8;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(-45deg, #2600ff 0%, #000000 100% );
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 100px;
+    grid-row-start: 30;
+    grid-row-end: 31;
+    grid-column-start: 10;
+    grid-column-end: 12;
+    margin-top: -30px;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .card {
