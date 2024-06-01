@@ -3,4 +3,4 @@ Bitcoin informative website targeted to those who want to delve into the realm o
 
 Questionable html and CSS styling and no dynamic support, don't plan to fix it.
 
-https://vortorix.github.io/ipt-website-master/Learn/index.html
+https://jtaomas.github.io/ipt-website-master/Learn/index.html
